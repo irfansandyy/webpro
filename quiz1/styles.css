@@ -1,0 +1,832 @@
+html, body {
+    font-size: 12px;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #E0EBFF;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    background: #FFFFFF;
+    box-shadow: 0 0.375rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5rem;
+}
+
+header h1 {
+    color: #000;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+header ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header ul a {
+    display: inline-flex;
+    padding: 0.625rem 1.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 0.5rem;
+    font-style: normal; 
+    font-weight: 400;
+    text-decoration: none;
+    line-height: normal;
+    color: #404040;
+    background: #FFFFFF;
+    font-size: 1.5rem;
+}
+
+header ul a:hover {
+    color: #292929;
+    background: #F1F1F1;
+}
+
+header ul a.active {
+    color: #2736FF;
+    background: #DBEAFE;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background: #001033;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-style: normal;
+    line-height: normal;
+    font-weight: 500;
+}
+
+.home {    
+    padding: 4rem;
+    padding-top: 12rem;
+    padding-bottom: 0;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    font-style: normal;
+    line-height: normal;
+}
+
+.home-hero h2 {
+    color: #404040;
+    font-size: 2rem;
+    font-weight: 500;
+    padding-top: 4rem;
+    margin-bottom: 2.25rem;
+    margin-top: 1rem;
+}
+
+.home-hero p {
+    width: 57.5rem;
+    color: #676767;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 8.75rem;
+}
+
+.home-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding-bottom: 5rem;
+}
+
+.home-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFFFFF;
+    border-radius: 1rem;
+    box-shadow: 0.25rem 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+    padding: 3.5rem 2rem 2rem 2rem;
+}
+
+.home-card h2 {
+    color: #000000;
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-top: 3rem;
+    margin-bottom: 1.125rem;
+}
+
+.home-card p {
+    width: 15rem;
+    color: #676767;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+svg {
+    width: 3rem;
+    height: 3rem;
+    aspect-ratio: 1/1;
+    margin: 0;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.home-card-icon {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1rem;
+}
+
+.home-card-icon-blue {
+    width: 5rem;
+    height: 3.75rem;
+    border-radius: 1rem;
+    padding-bottom: 1.25rem;
+    background: #BFD7FF;
+}
+
+.home-card-icon-green {
+    background: #C6FFBF;
+}
+
+.home-card-icon-red {
+    background: #FFD4D4;
+}
+
+.home-card-icon-pink {
+    background: #FDD3F4;
+}
+
+.home-closing {
+    width: 57.5rem;
+    color: #676767;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-bottom: 15rem;
+}   
+
+.profile {
+    display: flex;
+    justify-content: center;
+    padding: 12rem 4rem;
+}
+
+.profile-card {
+    background: #FFFFFF;
+    box-shadow: 0.125rem 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+    width: 75rem;
+    overflow: hidden;
+}
+
+.profile-header {
+    background: linear-gradient(90deg, #4362FF 0%, #7300FF 100%);
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-style: normal;
+    line-height: normal;
+    padding: 3rem 0 3rem 5rem;
+    gap: 4.5rem;
+}
+
+.profile-img {
+    width: 11.25rem;
+    height: 11.25rem;
+    aspect-ratio: 1/1;
+    border: 0.125rem solid transparent;
+    border-radius: 6rem;
+    outline: #FFFFFF;
+    outline-style: solid;
+    outline-width: 0.375rem;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-info h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}  
+
+.profile-job {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.profile-quote {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 3.5rem 4.5rem 3.5rem;
+}
+
+.profile-top-thirds {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    margin-bottom: 4rem;
+}
+
+.profile-title {
+    color: #404040;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.profile-about {
+    display: flex;
+    flex-direction: column;
+    gap: 1.375rem;
+}
+
+.profile-about p {
+    width: 32rem;
+    color: #676767;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.profile-facts, .profile-facts ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.profile-facts h2 {
+    margin-bottom: 1rem;
+}
+
+.profile-facts li {
+    display: flex;
+    width: 30rem;
+    padding: 0.625rem 1.25rem;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5rem;
+    background: #FBFBFB;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.profile-facts li span {
+    color: #707070;
+    font-weight: 500;
+}
+
+.profile-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.profile-skill-grid {
+    display: inline-grid;
+    row-gap: 1.875rem;
+    column-gap: 3rem;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.profile-skill {
+    display: inline-flex;
+    padding: 1.25rem 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 1rem;
+    background: #FBFBFB;
+}
+
+.profile-percentage {
+    color: #707070;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.profile-bar {
+    background: #D9D9D9;
+    border-radius: 0.5rem;
+    height: 1rem;
+    width: 100%;
+}
+
+.profile-bar span {
+    display: block;
+    height: 100%;
+    background: #2736FF;
+    border-radius: 0.5rem;
+}
+
+.profile-hobbies {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.profile-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.125rem;
+}
+
+.profile-tags span {
+    display: inline-flex;
+    white-space: nowrap;
+    color: #2736FF;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background: #DBEAFE;
+    padding: 0.625rem 1.5rem;
+    border-radius: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-tags span:hover {
+    background: #c5d5ff;
+}
+
+.hometown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12rem 4rem;
+}
+
+.hometown-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hometown-header h2 {
+    color: #404040;
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.hometown-header p {
+    width: 42rem;
+    color: #676767;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+.hometown-header img {
+    width: 68.75rem;
+    height: 31.25rem;
+    filter: drop-shadow(0 0.25rem 0.25rem rgba(0, 0, 0, 0.25));
+    margin-bottom: 2rem;
+}
+
+.hometown-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.hometown-content h2 {
+    color: #404040;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.hometown-content-first {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+}
+
+.hometown-about {
+    display: inline-flex;
+    padding: 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625rem;
+    border-radius: 1rem;
+    background: #FFFFFF;
+    box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+}
+
+.hometown-about p {
+    width: 30.25rem;
+    color: #676767;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.hometown-key-facts {
+    display: inline-flex;
+    padding: 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.75rem;
+    border-radius: 1rem;
+    background: #FFFFFF;
+    box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+}
+
+.hometown-fact {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.vertical-bar {
+    display: block;
+    height: 100%;
+    width: 0.375rem;
+}
+
+.hometown-fact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.hometown-fact-content h3 {
+    color: #404040;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.hometown-fact-content p {
+    color: #676767;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.hometown-content-second {
+    display: flex;
+    flex-direction: row;
+    gap: 1.625rem;
+}
+
+.hometown-fact-card {
+    display: flex;
+    width: 19.25rem;
+    padding: 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    border-radius: 1rem;
+    background: #FFF;
+    box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+}
+
+.hometown-fact-card p {
+    color: #676767;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.hometown-content-third {
+    display: flex;
+    width: 66rem;
+    padding: 1.5rem 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.875rem;
+    border-radius: 1rem;
+    background: #FFFFFF;
+    box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+}
+
+.hometown-famous-places {
+    display: grid;
+    row-gap: 1.875rem;
+    column-gap: 1.875rem;
+    align-self: stretch;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.hometown-place-card {
+    display: flex;
+    padding: 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    justify-self: start;
+    border-radius: 1rem;
+    border: 0.0625rem solid #676767;
+    background: #FFFFFF;
+}
+
+.hometown-place-card h3 {
+    color: #404040;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.hometown-place-card p {
+    color: #676767;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.food {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12rem 4rem;
+}
+
+.food-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.625rem;
+    padding-bottom: 3.125rem;
+    text-align: center;
+}
+
+.food-header h2 {
+    color: #404040;
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.food-header p {
+    width: 48rem;
+    color: #676767;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.food-description {
+    display: inline-flex;
+    padding: 2.5rem 3.125rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.875rem;
+    border-radius: 1rem;
+    background: linear-gradient(90deg, #294DFF 0%, #B224FF 100%);
+    color: #FFFFFF;
+    margin-bottom: 2.875rem;
+}
+
+.food-description h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.food-description p {
+    width: 62.5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.food-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 3.125rem;
+    margin-bottom: 3.125rem;
+}
+
+.food-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    background: #FFFFFF;
+    box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+    height: 100%;
+}
+
+.food-card img {
+    width: 32.75rem;
+    height: 13.125rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    object-fit: cover;
+}
+
+.food-card-description {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.25rem 1.25rem 1.25rem;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.food-card h2 {
+    color: #404040;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+.food-card p {
+    width: 30.3125rem;
+    color: #676767;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 1.25rem;
+}
+
+.food-card-tags {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.food-card-tags h3 {
+    color: #676767;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.food-card-tags span {
+    color: #404040;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.food-facts {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5625rem;
+    margin-bottom: 3.125rem;
+}
+
+.food-fact {
+    display: flex;
+    padding: 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    border-radius: 1rem;
+    background: #FFFFFF;
+    box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+}
+
+.food-fact h2 {
+    color: #404040;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.food-fact p {
+    width: 19.375rem;
+    color: #676767;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.food-places {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    background: #FFFFFF;
+    box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+    padding: 1.5rem 1.25rem;
+    width: 66.5rem;
+}
+
+.food-places h2 {
+    color: #404040;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+}
+
+.food-place-list li {
+    color: #676767;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.food-place-sections {
+    display: flex;
+    flex-direction: row;
+    gap: 12rem;
+}
+
+.food-place-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.food-place-list li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.food-place-list span {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+}
+
+.tourist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12rem 4rem;
+}
+
+.tourist-header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.625rem;
+    margin-bottom: 3.125rem;
+}
+
+.tourist-header h2 {
+    color: #404040;
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.tourist-header p {
+    width: 47.625rem;
+    color: #676767;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.tourist-places {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 3.75rem;
+}
+
+.tourist-card {
+    border-radius: 1rem;
+    background: #FFFFFF;
+    box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.25);
+}
+
+.tourist-card img {
+    width: 37.5rem;
+    height: 12.5rem;
+    object-fit: cover;
+}
+
+.tourist-card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+}
+
+.tourist-card-content h3 {
+    color: #404040;
+    font-family: Inter;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
