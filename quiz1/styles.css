@@ -1,3 +1,123 @@
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 1rem;
+  }
+
+  header ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .home-hero p,
+  .home-closing,
+  .profile-about p,
+  .profile-facts li,
+  .hometown-header p,
+  .food-header p,
+  .food-description p,
+  .tourist-header p,
+  .tourist-itinerary-contents p {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .home-cards,
+  .profile-top-thirds,
+  .hometown-content-first,
+  .hometown-content-second,
+  .food-facts,
+  .food-place-sections,
+  .tourist-itinerary-days {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .profile-card,
+  .hometown-content-third,
+  .food-places,
+  .tourist-tips {
+    width: 100%;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .profile-img {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .hometown-header img,
+  .food-card img,
+  .tourist-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hometown-famous-places,
+  .food-highlights,
+  .tourist-places {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .food-card,
+  .tourist-card {
+    width: 100%;
+  }
+
+  .food-card p,
+  .tourist-card-p {
+    width: 100%;
+  }
+
+  .tourist-tips-sections {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  footer {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+/* Tiny screens (phones under 480px) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header ul a {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .home-hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .home-card h2,
+  .profile-info h1,
+  .food-card h2,
+  .tourist-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .home-card p,
+  .profile-job,
+  .profile-quote,
+  .food-card p,
+  .tourist-card-p {
+    font-size: 0.9rem;
+  }
+}
+
 html, body {
     font-size: 12px;
     font-family: 'Inter', sans-serif;
