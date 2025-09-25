@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-fade-init">
     <header>
         <nav>
             <h1>Irfan Sandy</h1>
@@ -115,10 +115,8 @@
     <script>
         const navToggle = document.querySelector("header button");
         const navLinks = document.querySelector("header ul");
-
-        navToggle.addEventListener("click", () => {
-          navLinks.classList.toggle("active");
-        });
+        navToggle.addEventListener("click", () => navLinks.classList.toggle("active"));
+        window.requestAnimationFrame(() => document.body.classList.add('page-fade-ready'));
     </script>
 </body>
 </html>
