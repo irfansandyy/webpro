@@ -14,6 +14,7 @@
     <header>
         <nav>
             <h1>Irfan Sandy</h1>
+            <button aria-label="Toggle menu">☰</button>
             <ul>
                 <li><a href="/quiz1/">Home</a></li>
                 <li><a href="/quiz1/profile/">Profile</a></li>
@@ -219,5 +220,13 @@
     <footer>
         <p>&copy; 2025 Mochammad Irfan Sandy - Personal Website</p>
     </footer>
+    <script>
+        const navToggle = document.querySelector("header button");
+        const navLinks = document.querySelector("header ul");
+
+        navToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>

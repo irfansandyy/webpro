@@ -14,6 +14,7 @@
     <header>
         <nav>
             <h1>Irfan Sandy</h1>
+            <button aria-label="Toggle menu">☰</button>
             <ul>
                 <li><a href="/quiz1/" class="active">Home</a></li>
                 <li><a href="/quiz1/profile/">Profile</a></li>
@@ -25,14 +26,14 @@
     </header>
 
     <main class="home">
-        <section class="home-hero">
+        <div class="home-hero">
             <img src="/img/profile-picture.png" alt="profile picture" class="home-picture">
             <h2>Welcome to My Personal Website</h2>
             <p>I’m a Computer Science student at ITS with a strong interest in technology, organizations, and community service. I enjoy working in teams, adapting to challenges, and solving problems with efficiency and detail. While I sometimes struggle with confidence and overthinking, I’m passionate about entrepreneurship, robotics, automotive, and programming</p>
-        </section>
+        </div>
 
-        <section class="home-cards">
-            <article class="home-card">
+        <div class="home-cards">
+            <div class="home-card">
                 <div class="home-card-icon-blue">
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                         <g clip-path="url(#clip0_81_72)">
@@ -47,9 +48,9 @@
                 </div>
                 <h2>Developer</h2>
                 <p>Passionate about creating great and beatufiul software</p>
-            </article>
+            </div>
 
-            <article class="home-card">
+            <div class="home-card">
                 <div class="home-card-icon-green home-card-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                         <path d="M12 38H18V26H30V38H36V20L24 11L12 20V38ZM8 42V18L24 6L40 18V42H26V30H22V42H8Z" fill="black"/>
@@ -57,9 +58,9 @@
                 </div>
                 <h2>Malang Native</h2>
                 <p>Born and raised in Apple City or City Malang</p>
-            </article>
+            </div>
 
-            <article class="home-card">
+            <div class="home-card">
                 <div class="home-card-icon-red home-card-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                         <path d="M2 44C2 45.08 2.9 46 4 46H30C31.12 46 32 45.08 32 44V42H2V44ZM17 18C9.5 18 2 22 2 30H32C32 22 24.5 18 17 18ZM7.24 26C9.46 22.9 14.18 22 17 22C19.82 22 24.54 22.9 26.76 26H7.24ZM2 34H32V38H2V34ZM36 10V2H32V10H22L22.46 14H41.58L38.78 42H36V46H39.44C41.12 46 42.5 44.7 42.7 43.06L46 10H36Z" fill="black"/>
@@ -67,9 +68,9 @@
                 </div>
                 <h2>Food Enthusiast</h2>
                 <p>Love exploring culinary scene around Malang City</p>
-            </article>
+            </div>
 
-            <article class="home-card">
+            <div class="home-card">
                 <div class="home-card-icon-pink home-card-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
                         <path d="M30 42L18 37.8L8.7 41.4C8.03333 41.6667 7.41667 41.592 6.85 41.176C6.28333 40.76 6 40.2013 6 39.5V11.5C6 11.0667 6.12533 10.6833 6.376 10.35C6.62667 10.0167 6.968 9.76667 7.4 9.6L18 6L30 10.2L39.3 6.6C39.9667 6.33333 40.5833 6.40867 41.15 6.826C41.7167 7.24333 42 7.80133 42 8.5V36.5C42 36.9333 41.8753 37.3167 41.626 37.65C41.3767 37.9833 41.0347 38.2333 40.6 38.4L30 42ZM28 37.1V13.7L20 10.9V34.3L28 37.1ZM32 37.1L38 35.1V11.4L32 13.7V37.1ZM10 36.6L16 34.3V10.9L10 12.9V36.6Z" fill="black"/>
@@ -77,16 +78,25 @@
                 </div>
                 <h2>Culture Guide</h2>
                 <p>Very eager to share the culture around Malang City</p>
-            </article>
-        </section>
+            </div>
+        </div>
 
-        <section class="home-closing">
+        <div class="home-closing">
             <p>Explore the different sections to learn more about me, my hometown Malang, and discover some amazing local food and tourist destinations!</p>
-        </section>
+        </d>
     </main>
 
     <footer>
         <p>&copy; 2025 Mochammad Irfan Sandy - Personal Website</p>
     </footer>
+
+    <script>
+        const navToggle = document.querySelector("header button");
+        const navLinks = document.querySelector("header ul");
+
+        navToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>

@@ -14,6 +14,7 @@
     <header>
         <nav>
             <h1>Irfan Sandy</h1>
+            <button aria-label="Toggle menu">☰</button>
             <ul>
                 <li><a href="/quiz1/">Home</a></li>
                 <li><a href="/quiz1/profile/">Profile</a></li>
@@ -25,15 +26,15 @@
     </header>
 
     <main class="hometown">
-        <section class="hometown-header">
+        <div class="hometown-header">
             <div class="hometown-header-text">
                 <h2>My Hometown: Malang, Indonesia</h2>
                 <p>The quiet city of Malang where people here lives peacefully. The city full of slow living people</p>
             </div>
             <img src="/img/bundaran.png" alt="Alun-Alun Malang">
-        </section>
+        </div>
 
-        <section class="hometown-content">
+        <div class="hometown-content">
             <div class="hometown-content-first">
                 <div class="hometown-about">
                     <h2>About Malang</h2>
@@ -84,7 +85,7 @@
                     <h2>🏛️ Cultural Heritage</h2>
                     <p>The city blends Javanese traditions with Dutch colonial history, featuring beautiful colonial-era buildings, traditional markets, and cultural festivals like Malang Tempo Doeloe</p>
                 </div>
-                <div class="hometown-fact-card">
+                <div class="hometown-fact-card hometown-fact-card-wide">
                     <h2>🚉 Gateway to Nature</h2>
                     <p>Malang serves as the gateway to Mount Bromo and other natural attractions in East Java, with easy access to mountains, beaches, forests, and waterfalls</p>
                 </div>
@@ -126,11 +127,19 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2025 Mochammad Irfan Sandy - Personal Website</p>
     </footer>
+    <script>
+        const navToggle = document.querySelector("header button");
+        const navLinks = document.querySelector("header ul");
+
+        navToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>

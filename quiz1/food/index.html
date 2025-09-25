@@ -14,6 +14,7 @@
     <header>
         <nav>
             <h1>Irfan Sandy</h1>
+            <button aria-label="Toggle menu">☰</button>
             <ul>
                 <li><a href="/quiz1/">Home</a></li>
                 <li><a href="/quiz1/profile/">Profile</a></li>
@@ -92,7 +93,7 @@
                 <h2>🥬 Fresh Ingredients</h2>
                 <p>Highland farms around Batu and Malang supply fresh vegetables, fruits, and apples that enrich the local cuisine</p>
             </div>
-            <div class="food-fact">
+            <div class="food-fact food-fact-wide">
                 <h2>🍴 Dining Etiquette</h2>
                 <p>Malang dining mixes casual warungs, student-friendly cafés, and family-style meals. Sharing dishes is common, reflecting Javanese hospitality</p>
             </div>
@@ -125,5 +126,14 @@
     <footer>
         <p>&copy; 2025 Mochammad Irfan Sandy - Personal Website</p>
     </footer>
+    
+    <script>
+        const navToggle = document.querySelector("header button");
+        const navLinks = document.querySelector("header ul");
+
+        navToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>
