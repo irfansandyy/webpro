@@ -2,7 +2,7 @@
 
 Here is the website code for my quiz 1 assignment for WebPro
 
-1. [100 points] Website Development Project
+Website Development Project
 For this quiz, you will build a (static) personal website using HTML, CSS, and JavaScript.
 You are free to use libraries and frameworks like jQuery or Bootstrap for layout and styling.
 
